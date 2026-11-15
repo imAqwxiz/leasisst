@@ -1,17 +1,33 @@
-{
-	"geode": "$GEODE_VERSION",
-	"gd": {
-		"win": "2.2081",
-		"android": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
-	},
-	"id": "$MOD_ID",
-	"name": "$MOD_NAME",
-	"version": "$MOD_VERSION",
-	"developer": "$MOD_DEVELOPER",
-	"description": "$MOD_DESCRIPTION",
-	"dependencies": {
-		"geode.node-ids": ">=v1.23.3"
-	}
+"settings": {
+    "assist-on": {
+        "name": "Enable Assist",
+        "description": "Turns the click-delay assist on or off.",
+        "type": "bool",
+        "default": false
+    },
+    "preset": {
+        "name": "Preset",
+        "description": "Picking a preset sets the two sliders below.",
+        "type": "string",
+        "default": "Top 1000",
+        "one-of": ["Top 1000", "Top 500", "Top 100", "Top 10", "Top 1"]
+    },
+    "accuracy": {
+        "name": "Click Accuracy",
+        "description": "0 = clicks fire as early as safely possible. 100 = clicks are delayed to the last frame that still survives.",
+        "type": "int",
+        "default": 35,
+        "min": 0,
+        "max": 100,
+        "control": { "slider": true, "input": true }
+    },
+    "lookahead": {
+        "name": "Lookahead Frames",
+        "description": "How many frames (at 60 FPS) ahead the assist looks for hazards.",
+        "type": "int",
+        "default": 6,
+        "min": 1,
+        "max": 30,
+        "control": { "slider": true, "input": true }
+    }
 }
