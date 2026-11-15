@@ -1,33 +1,50 @@
-"settings": {
+{
+  "geode": "5.0.0",
+  "gd": {
+    "android64": "2.2081"
+  },
+  "version": "v1.0.0",
+  "id": "aqwxiz.lookahead-assist",
+  "name": "Lookahead Assist",
+  "developer": "aqwxiz",
+  "description": "Delays your clicks to the last surviving frame. Cube, ball, spider, wave and orb support, with skill presets.",
+  "settings": {
     "assist-on": {
-        "name": "Enable Assist",
-        "description": "Turns the click-delay assist on or off.",
-        "type": "bool",
-        "default": false
+      "name": "Enable Assist",
+      "description": "Turns the click-delay assist on or off.",
+      "type": "bool",
+      "default": false
     },
     "preset": {
-        "name": "Preset",
-        "description": "Picking a preset sets the two sliders below.",
-        "type": "string",
-        "default": "Top 1000",
-        "one-of": ["Top 1000", "Top 500", "Top 100", "Top 10", "Top 1"]
+      "name": "Preset",
+      "description": "Picking a preset sets the two sliders below.",
+      "type": "string",
+      "default": "Top 1000",
+      "one-of": ["Top 1000", "Top 500", "Top 100", "Top 10", "Top 1"]
     },
     "accuracy": {
-        "name": "Click Accuracy",
-        "description": "0 = clicks fire as early as safely possible. 100 = clicks are delayed to the last frame that still survives.",
-        "type": "int",
-        "default": 35,
-        "min": 0,
-        "max": 100,
-        "control": { "slider": true, "input": true }
+      "name": "Click Accuracy",
+      "description": "0 = clicks fire as early as safely possible. 100 = clicks are delayed to the last frame that still survives.",
+      "type": "int",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "control": {
+        "slider": true,
+        "input": true
+      }
     },
     "lookahead": {
-        "name": "Lookahead Frames",
-        "description": "How many frames (at 60 FPS) ahead the assist looks for hazards.",
-        "type": "int",
-        "default": 6,
-        "min": 1,
-        "max": 30,
-        "control": { "slider": true, "input": true }
+      "name": "Lookahead Frames",
+      "description": "How many frames (at 60 FPS) ahead the assist looks for hazards.",
+      "type": "int",
+      "default": 6,
+      "min": 1,
+      "max": 30,
+      "control": {
+        "slider": true,
+        "input": true
+      }
     }
+  }
 }
